@@ -1,0 +1,322 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(7, 7, 7);
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url(assests/header-image.png);
+    background-size: cover;
+    /* background-position: center; */
+    padding: 10px 8%;
+    /* with the help of position: relative; we can adjust the top bottom left right of that element */
+    /* eg ->  left: 10%; */
+    position: relative;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo{
+     width: 150px;
+     cursor: pointer;
+}
+
+nav button{
+    border:  0;
+    outline: 0;
+    background:  #db0001;
+    padding: 7px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-btn{
+    background:  transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 7px 10px;
+}
+
+.language-btn img{
+    width: 10px;
+}
+
+.header-content{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+     text-align: center;
+}
+
+.header-content h1{
+    font-size: 300%;
+    line-height: 70px;
+    font-weight: 600;
+    
+}
+
+.header-content h3{
+    font-size: 300%;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.header-content h4{
+    font-size: 150%;
+    font-weight: 250;
+    margin-bottom: 20px;
+}
+
+.header-content p{
+    font-size: 130%;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.email-signup{
+    background: ;
+    border-radius: 4px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.email-signup input{
+    border: 1px solid white;
+    outline: 0;
+    background: transparent;
+    margin-left: -50px;
+    margin-top: 10px;
+    padding: 18px 10px;
+    width: 40%;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.email-signup button{
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background: #db0001;
+    padding: 18px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.features{
+    font-size: 22px;
+    color: #fff;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    
+}
+
+.first{
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    margin-right: 8%;
+}
+
+.second{
+    width: 70%;
+}
+
+.img-col img{
+display: block;
+width: 70%;
+
+}
+
+.text-col-second{
+    flex-basis: 50%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.first2{
+    margin-right: 20%;
+    width: 60%;
+    font-size: 50px;
+}
+
+.img-col2 img{
+    margin-left: 30%;
+    width: 70%;
+}
+
+.second2{
+    width: 50%;
+}
+
+.first4{
+    width: 70%;
+    font-size: 50px;
+    margin-left: 15%;
+    margin-bottom: 4%;
+}
+ 
+.img-col4 img{
+    margin-left: 40%;
+    width: 70%;
+}
+
+.second4{
+    width: 50%;
+    margin-left: 15%;
+}
+
+
+/* faq */
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.Accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.Accordian li{
+ list-style: none;
+ width: 100%;
+ padding: 5px;
+}
+
+.Accordian li label{
+    display: flex;              
+    align-items: center;
+    background: #303030;
+    padding: 20px;            
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    cursor: pointer;
+    position: relative;    
+}
+
+
+/* positon absolute sa hum right or left sa cntrl kar sakta ha */
+label::after{
+    content: '+';
+    color: #fff;
+    font-size: 34px;
+    position:  absolute;
+    right: 20px;
+    
+    /* transition: transform 0.5s; */
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.Accordian .content{
+    padding: 0px 20px;
+    text-align: left;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s , padding 0.5s;
+}
+
+.Accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.Accordian input[type="radio"]:checked + label::after{
+/* content khula baad sign rotate ho raha ha */
+transform: rotate(135deg);
+}
+
+.email-signup  {
+   margin-bottom: 10%;
+}
+
+
+.footer{
+    color: #fff;
+    padding:  80px 15%;
+    border-top: 6px solid #303030;
+}
+
+
+.row a{
+    color: #fff;
+    display: flex;
+    
+}
+
+.column a{
+    color: #fff;
+}
+
+.footer h2{
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 2px;
+    color: #777;
+}
+
+.footer .column{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .column a{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer .row{
+align-items: flex-start;
+}
+
+.footer .buttons button{
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #777;
+    border: 1px solid #777;
+}
